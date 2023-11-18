@@ -1,0 +1,15 @@
+# Ignorar archivos de caché de Python
+__pycache__/
+
+# Ignorar archivos pyc (archivos compilados de Python)
+*.pyc
+
+# Ignorar el directorio VirtualEnvironment
+VirtualEnvironment/
+
+# Ignorar archivos específicos
+proyectoFinalCompiladores/VirtualEnvironment/Scripts/pywin32_postinstall.py
+proyectoFinalCompiladores/VirtualEnvironment/Scripts/pywin32_testall.py
+proyectoFinalCompiladores/VirtualEnvironment/Scripts/sqlformat.exe
+proyectoFinalCompiladores/VirtualEnvironment/pyvenv.cfg
+proyectoFinalCompiladores/requirements.txt
