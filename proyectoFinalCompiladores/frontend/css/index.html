@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'Interprete/css/styles.css' %}">
+    <script src="{% static 'Interprete/js/langs.js' %}"></script>
+    <script src="{% static 'Interprete/js/logicaVista.js' %}"></script>
+    <title>Proyecto Final - Intérprete</title>
+</head>
+
+<body>
+    <div class="container-md pt-2">
+        <h1 id="tituloP"> Proyecto Final - Intérprete</h1>
+        <h6 class="creditos">Por: Faiber Hernández y César Torres</h6>
+        <div class="card">
+            <div class="card-body ">
+                <div class="row row-cols-1 row-cols-md-2 g-2 mb-2">
+                    <div class="col mb-2">
+                        <div class="form-floating">
+                            <textarea class="form-control txAreaIn" placeholder="Código aquí" id="codigoDigitado"
+                                style="height: 300px"></textarea>
+                            <label for="floatingTextarea" class="floatingLabelColor" id="tituloCodigo">
+                                <i class="fa-solid fa-code"></i> Escriba su código
+                                aqúi: </label>
+                        </div>
+                        <div class="input-group">
+                            <button id="btnVerificar" class="btn  btn-outline-info  mt-2" type="button"><i class="fa-solid fa-glasses"></i> Validar</button>
+                            <button id="btnEjecutar" class="btn  btn-outline-info  mt-2" type="button"><i class="fa-solid fa-play"></i> Ejecutar</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating ms-4 overflow-auto "  style="height: 300px">
+                            <h5 id="expls"> <i class="fa-solid fa-note-sticky"></i> Código de ejemplo:</h5>
+                            <a class="exItem" id = "tablas">Tablas de multiplicar</a>
+                            <pre hidden = "true" id="ejemploAll">
+exitus{"Tablas de" & " multiplicar"}
+
+numero a <- 0
+numero c
+c<-1
+exitus{"----------------"}
+
+dum {a<4+c}:
+	a<-a+1
+	numero b
+	b<-0
+	dum{b<4+c}:
+		b<-b+1
+		exitus{a & " * " & b & " = " & a * b}
+	dumnd
+	exitus{"----------------"}
+dumnd
+
+a<-9
+numero b
+b<-12
+c<-13
+
+boolean h <- a>10
+si{h}:
+    exitus{"a es mayor que 10."}
+	si{b>11}:
+        exitus{"a es mayor que 10 y b es mayor que 11."}
+		si{c>12}:
+            exitus{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+		sind
+	sind
+aluid:
+    exitus{"a es menor o igual que 10 y vale: " & a}
+sind
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body ">
+                <div class="row row-cols-1 g-2 mb-2">
+                    <div class="col overflow-auto " style="height: 200px">
+                        <h5 id="salida"><i class="fa-solid fa-outdent"></i> Salida:</h5>
+                        <p id="textico"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="input-group">
+                    <div class="form-floating ms-3  mt-2">
+                        <select class="form-select btn  btn-outline-info" id="language" onchange="deselect()"
+                            onmouseleave="deselect()">
+                            <option id="ES" value="1">Español</option>
+                            <option id="EN" value="2">Inglés</option>
+                            <option id="PT" value="3">Portugués</option>
+                        </select>
+                        <label id="lenguaje" for="language" class="floatingLabelColor">Lenguaje</label>
+                    </div>
+
+                    <div class="form-floating ms-3  mt-2">
+                        <select class="form-select btn  btn-outline-info" id="langDefault" onchange="deselect()"onmouseleave="deselect()">
+                        </select>
+                        <label id="lblVoz" for="langDefault" class="floatingLabelColor">Voz</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'Interprete/js/tts.js' %}"></script>
+</body>
+
+</html>

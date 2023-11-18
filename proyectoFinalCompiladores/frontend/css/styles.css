@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --paletaColor1: #A7FF83;
+    --paletaColor2: #17B978;
+    --paletaColor3: #086972;
+    --paletaColor4: #071A52;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
+}
+
+.diagrama {
+    width: 100%;
+    height: 400px;
+    background-color: #DAE4E4;
+}
+
+body {
+    background: rgb(7, 26, 82);
+    background: linear-gradient(95deg, rgba(7, 26, 82, 1) 0%, rgba(8, 105, 114, 1) 50%, rgba(23, 185, 120, 1) 100%);
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6,p,pre {
+    color: var(--paletaColor1);
+}
+
+.card {
+    border-color: var(--paletaColor3);
+    background-color: var(--paletaColor4);
+}
+
+.card-footer {
+    border-color: var(--paletaColor3);
+}
+
+.creditos {
+    color: var(--paletaColor2);
+}
+
+.btn-outline-info {
+    --bs-btn-color: var(--paletaColor1);
+    --bs-btn-border-color: var(--paletaColor1);
+    --bs-btn-hover-color: var(--paletaColor4);
+    --bs-btn-hover-bg: var(--paletaColor1);
+    --bs-btn-hover-border-color: var(--paletaColor1);
+    --bs-btn-focus-shadow-rgb: 13, 202, 240;
+    --bs-btn-active-color: var(--paletaColor4);
+    --bs-btn-active-bg: var(--paletaColor1);
+    --bs-btn-active-border-color: var(--paletaColor1);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--paletaColor1);
+    --bs-btn-disabled-bg: transparent;
+    --bs-gradient: none;
+}
+
+.deladito h3 {
+    display: inline
+}
+
+.floatingLabelColor {
+    color: var(--paletaColor1);
+}
+
+.txAreaIn {
+    color: var(--paletaColor1);
+    background: rgb(2,0,36);
+    background: linear-gradient(262deg, rgba(2,0,36,1) 6%, rgba(7,26,82,1) 56%, rgba(2,0,36,1) 94%);
+}
+
+.txAreaIn:focus {
+    color: var(--paletaColor1);
+}
+
+.exItem{
+    cursor: pointer;
+    color: var(--paletaColor1);
+}
