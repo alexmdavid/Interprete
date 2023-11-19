@@ -7,9 +7,4 @@ __pycache__/
 # Ignorar el directorio VirtualEnvironment
 VirtualEnvironment/
 
-# Ignorar archivos específicos
-proyectoFinalCompiladores/VirtualEnvironment/Scripts/pywin32_postinstall.py
-proyectoFinalCompiladores/VirtualEnvironment/Scripts/pywin32_testall.py
-proyectoFinalCompiladores/VirtualEnvironment/Scripts/sqlformat.exe
-proyectoFinalCompiladores/VirtualEnvironment/pyvenv.cfg
-proyectoFinalCompiladores/requirements.txt
+

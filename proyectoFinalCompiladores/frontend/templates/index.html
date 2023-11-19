@@ -16,7 +16,13 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Estilos de jesid -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/langs.js' %}"></script>
     <script src="{% static 'js/logicaVista.js' %}"></script>
@@ -25,9 +31,69 @@
 
 <body>
     <div class="container-md pt-2">
-        <h1 id="tituloP"> Proyecto Final - Intérprete</h1>
-        <h6 class="creditos">Por: Daniel Basili el pro</h6>
+        <h1 id="tituloP">Intérprete De FachaCode</h1>
+        <div class="input-group input-group-jesid">
+            <div class="form-floating ms-3  mt-2">
+                <select class="form-select btn  btn-outline-info" id="language" onchange="deselect()"
+                    onmouseleave="deselect()">
+                    <option id="ES" value="1">Español</option>
+                    <option id="EN" value="2">Inglés</option>
+                    <option id="PT" value="3">Portugués</option>
+                </select>
+                <label id="lenguaje" for="language" class="floatingLabelColor">Lenguaje</label>
+            </div>
+
+            <div class="form-floating ms-3  mt-2">
+                <select class="form-select btn  btn-outline-info" id="langDefault" onchange="deselect()"
+                    onmouseleave="deselect()">
+                </select>
+                <label id="lblVoz" for="langDefault" class="floatingLabelColor">Voz</label>
+            </div>
+        </div>
         <div class="card">
+            <div class="example">
+                <div class="form-floating ms-4 overflow-auto ">
+                    <h5 id="expls"> <i class="fa-solid fa-note-sticky"></i> Código de ejemplo:</h5>
+                    <a class="exItem" id="tablas">Tablas de multiplicar</a>
+                    <pre hidden="true" id="ejemploAll">
+exitus{"Tablas de" & " multiplicar"}
+
+numero a <- 0
+numero c
+c<-1
+exitus{"----------------"}
+
+dum {a<4+c}:
+a<-a+1
+numero b
+b<-0
+dum{b<4+c}:
+b<-b+1
+exitus{a & " * " & b & " = " & a * b}
+dumnd
+exitus{"----------------"}
+dumnd
+
+a<-9
+numero b
+b<-12
+c<-13
+
+boolean h <- a>10
+si{h}:
+exitus{"a es mayor que 10."}
+si{b>11}:
+exitus{"a es mayor que 10 y b es mayor que 11."}
+si{c>12}:
+    exitus{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+sind
+sind
+aluid:
+exitus{"a es menor o igual que 10 y vale: " & a}
+sind
+                    </pre>
+                </div>
+            </div>
             <div class="card-body ">
                 <div class="row row-cols-1 row-cols-md-2 g-2 mb-2">
                     <div class="col mb-2">
@@ -39,51 +105,12 @@
                                 aqúi: </label>
                         </div>
                         <div class="input-group">
-                            <button id="btnVerificar" class="btn  btn-outline-info  mt-2" type="button"><i class="fa-solid fa-glasses"></i> Validar</button>
-                            <button id="btnEjecutar" class="btn  btn-outline-info  mt-2" type="button"><i class="fa-solid fa-play"></i> Ejecutar</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-floating ms-4 overflow-auto "  style="height: 300px">
-                            <h5 id="expls"> <i class="fa-solid fa-note-sticky"></i> Código de ejemplo:</h5>
-                            <a class="exItem" id = "tablas">Tablas de multiplicar</a>
-                            <pre hidden = "true" id="ejemploAll">
-exitus{"Tablas de" & " multiplicar"}
-
-numero a <- 0
-numero c
-c<-1
-exitus{"----------------"}
-
-dum {a<4+c}:
-	a<-a+1
-	numero b
-	b<-0
-	dum{b<4+c}:
-		b<-b+1
-		exitus{a & " * " & b & " = " & a * b}
-	dumnd
-	exitus{"----------------"}
-dumnd
-
-a<-9
-numero b
-b<-12
-c<-13
-
-boolean h <- a>10
-si{h}:
-    exitus{"a es mayor que 10."}
-	si{b>11}:
-        exitus{"a es mayor que 10 y b es mayor que 11."}
-		si{c>12}:
-            exitus{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
-		sind
-	sind
-aluid:
-    exitus{"a es menor o igual que 10 y vale: " & a}
-sind
-                            </pre>
+                            <button id="btnVerificar" class="btn  btn-outline-info btn-play  mt-2" type="button">
+                                <span class="material-symbols-outlined">
+                                    done_all
+                                </span> Validar</button>
+                            <button id="btnEjecutar" class="btn  btn-outline-info  mt-2" type="button"><i
+                                    class="fa-solid fa-play"></i> Ejecutar</button>
                         </div>
                     </div>
                 </div>
@@ -93,25 +120,6 @@ sind
                     <div class="col overflow-auto " style="height: 200px">
                         <h5 id="salida"><i class="fa-solid fa-outdent"></i> Salida:</h5>
                         <p id="textico"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="input-group">
-                    <div class="form-floating ms-3  mt-2">
-                        <select class="form-select btn  btn-outline-info" id="language" onchange="deselect()"
-                            onmouseleave="deselect()">
-                            <option id="ES" value="1">Español</option>
-                            <option id="EN" value="2">Inglés</option>
-                            <option id="PT" value="3">Portugués</option>
-                        </select>
-                        <label id="lenguaje" for="language" class="floatingLabelColor">Lenguaje</label>
-                    </div>
-
-                    <div class="form-floating ms-3  mt-2">
-                        <select class="form-select btn  btn-outline-info" id="langDefault" onchange="deselect()"onmouseleave="deselect()">
-                        </select>
-                        <label id="lblVoz" for="langDefault" class="floatingLabelColor">Voz</label>
                     </div>
                 </div>
             </div>
