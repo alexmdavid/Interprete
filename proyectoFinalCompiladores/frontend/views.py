@@ -1,11 +1,11 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
-from Interprete.static.Interprete.py import principal
+from generadores import principal
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'vistaInterprete.html')
+    return render(request, 'index.html')
 
 def validar(request):
     if(request.method == 'GET'):
@@ -18,3 +18,4 @@ def ejecutar(request):
         return JsonResponse({ "resultado": principal.ejecutar(request.GET['codigo']) })
     else:
         return HttpResponse("holi pvto")
+    

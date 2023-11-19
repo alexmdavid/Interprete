@@ -129,8 +129,8 @@ precedence = (
 
 # Definición de la gramática
 
-from Interprete.static.Interprete.py.expresiones import *
-from Interprete.static.Interprete.py.instrucciones import *
+from generadores.expresiones import *
+from generadores.instrucciones import *
 
 
 def p_init(t) :

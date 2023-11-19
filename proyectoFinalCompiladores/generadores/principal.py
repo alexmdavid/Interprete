@@ -1,7 +1,8 @@
-from Interprete.static.Interprete.py import gramatica as g
-from Interprete.static.Interprete.py import ts as TS
-from Interprete.static.Interprete.py.expresiones import *
-from Interprete.static.Interprete.py.instrucciones import *
+
+from generadores import gramatica as g
+from generadores import ts as TS
+from generadores.expresiones import *
+from generadores.instrucciones import *
 
 s = ""
 
