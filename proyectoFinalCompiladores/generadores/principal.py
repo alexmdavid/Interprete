@@ -139,8 +139,8 @@ def procesar_instrucciones(instrucciones, ts) :
             elif isinstance(instr, IfElse) : procesar_if_else(instr, ts)
             else : s+='Error: instrucción no válida'
     except:
-        from Interprete.static.Interprete.py.ts import error as error
-        from Interprete.static.Interprete.py.gramatica import errorG as errorG
+        from generadores.ts import error as error
+        from generadores.gramatica import errorG as errorG
         s = (str(errorG) + "\n" + str(error))
         print(s)
 
@@ -148,8 +148,8 @@ def procesar_instrucciones(instrucciones, ts) :
 def validar(text):
     g.parse(text)
     global s
-    from Interprete.static.Interprete.py.ts import error as error
-    from Interprete.static.Interprete.py.gramatica import errorG as errorG
+    from generadores.ts import error as error
+    from generadores.gramatica import errorG as errorG
     s = (str(errorG) + "\n" + str(error))
     return (s)
     
