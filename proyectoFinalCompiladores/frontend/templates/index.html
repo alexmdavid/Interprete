@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -23,9 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <script src="{% static 'js/langs.js' %}"></script>
-    <script src="{% static 'js/logicaVista.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    <script src="{% static 'js/langs.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/logicaVista.js' %}" type="application/javascript"></script>
     <title>Proyecto Final - Intérprete</title>
 </head>
 
@@ -52,52 +51,64 @@
         </div>
         <div class="card">
             <div class="example">
-                <div class="form-floating ms-4 overflow-auto ">
-                    <h5 id="expls"> <i class="fa-solid fa-note-sticky"></i> Código de ejemplo:</h5>
-                    <a class="exItem" id="tablas">Tablas de multiplicar</a>
-                    <pre hidden="true" id="ejemploAll">
-        imp{"Tablas de" & " multiplicar"}
+                <div id="box_examples" style="width: 20%;">
+                    <label for="opciones" style="font-size: 18px;">Codigos De Ejemplo:</label>
+                    <select id="opciones" name="opciones" style="font-size:12px;">
+                        <option value="vacio"></option>
+                        <option value="suma">Tablas De Sumar </option>
+                        <option value="multiplicar">Tablas De Multiplicar</option>
+                        <option value="fachatez">Tabla de fachatez</option>
+                    </select>
+                    <pre hidden="true" id="multiplicar">
+    imp{"Tablas de" & " multiplicar"}
 
-        num a <- 0
-        num c
-        c<-1
-        imp{"tabla del 1"}
-        imp{"----------------"}
-        
-        enquanto{a<9+c}:
-            a<-a+1
-            num b
-            b<-0
-            enquanto{b<9+c}:
-                b<-b+1
-                imp{a & " x " & b & " = " & a * b}
-            finenq
-            imp{"   "}
-            sim{a<=10}:                    
-                imp{"tabla del "&a+1}
-                imp{"----------------"}
-            finsim
-        finenq
-        
-        a<-9
+    num a <- 0
+    num c
+    c<-1
+    imp{"tabla del 1"}
+    imp{"----------------"}
+
+    enquanto{a<9+c}:
+        a<-a+1
         num b
-        b<-12
-        c<-13
-        
-        cheo h <- a>10
-        sim{h}:
-            imp{"a es mayor que 10."}
-            sim{b>11}:
-                imp{"a es mayor que 10 y b es mayor que 11."}
-                sim{c>12}:
-                    imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
-                finsim
-            finsim
-            
-                imp{"a es menor o igual que 10 y vale: " & a}
+        b<-0
+        enquanto{b<9+c}:
+            b<-b+1
+            imp{a & " x " & b & " = " & a * b}
+        finenq
+        imp{"   "}
+        sim{a<=10}:                    
+            imp{"tabla del "&a+1}
+            imp{"----------------"}
         finsim
+    finenq
+
+    a<-9
+    num b
+    b<-12
+    c<-13
+
+    cheo h <- a>10
+    sim{h}:
+        imp{"a es mayor que 10."}
+        sim{b>11}:
+            imp{"a es mayor que 10 y b es mayor que 11."}
+            sim{c>12}:
+                imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+            finsim
+        finsim
+        
+            imp{"a es menor o igual que 10 y vale: " & a}
+    finsim
                                             
                     </pre>
+                    <pre hidden="true" id="suma">
+                        aqui va el codigo de las sumas  > &
+                    </pre>
+                    <pre hidden="true" id="fachatez">
+                        todos son fachas execpto daniel
+                    </pre>
+                    <pre hidden="true" id="vacio"></pre>
                 </div>
             </div>
             <div class="card-body ">

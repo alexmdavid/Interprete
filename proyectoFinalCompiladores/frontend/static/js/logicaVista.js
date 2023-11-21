@@ -48,24 +48,20 @@ $(function () {
         }
     });
 
-    $('#codigoDigitado').keydown(function (e) {
-        if (e.keyCode === 9) {
-            var start = this.selectionStart;
-            end = this.selectionEnd;
-
-            var $this = $(this);
-
-            $this.val($this.val().substring(0, start)
-                + " "
-                + $this.val().substring(end));
-            this.selectionStart = this.selectionEnd = start + 1;
-            return false;
-        }
+    
+    // Escucha el evento de cambio en las opciones del menú desplegable
+    $("#opciones").change(function() {
+        // Obtiene el valor seleccionado
+        var seleccion = $(this).val();
+        
+        // Obtiene el contenido del pre correspondiente a la opción seleccionada
+        var contenido = $("#" + seleccion).text();
+        
+        // Muestra el contenido en el textarea con ID "codigoDigitado"
+        $("#codigoDigitado").val(contenido);
     });
-
-    $(".exItem").click(function (e) { 
-        $("#codigoDigitado").val($("#ejemploAll").text())
-    });
+   
+      
 });
 
 function deselect() {
