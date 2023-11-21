@@ -8,19 +8,19 @@
 errorG = ""
 
 reservadas = {
-    'numero' : 'NUMERO',
-    'boolean' : 'BOOL',
-    'real' : 'TRUE',
-    'falsus' : 'FALSE',
-    'exitus' : 'IMPRIMIR',
-    'dum' : 'MIENTRAS',
-    'dumnd' : 'FINMIENTRAS',
-    'si' : 'IF',
-    'aluid' : 'ELSE',
-    'sind' : 'FINSI',
-    'vade' : 'PARA',
-    'vadend' : 'FINPARA',
-    'facere' : 'HACER'
+    'num' : 'NUMERO',
+    'cheo' : 'BOOL',
+    'verdadeiro' : 'TRUE',
+    'embuste' : 'FALSE',
+    'imp' : 'IMPRIMIR',
+    'enquanto' : 'MIENTRAS',
+    'finenq' : 'FINMIENTRAS',
+    'sim' : 'IF',
+    'sinao' : 'ELSE',
+    'finsim' : 'FINSI',
+    'par' : 'PARA',
+    'finpar' : 'FINPARA',
+    'fazer' : 'HACER'
 }
 
 tokens  = [
