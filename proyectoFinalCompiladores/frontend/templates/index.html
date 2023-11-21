@@ -56,40 +56,47 @@
                     <h5 id="expls"> <i class="fa-solid fa-note-sticky"></i> Código de ejemplo:</h5>
                     <a class="exItem" id="tablas">Tablas de multiplicar</a>
                     <pre hidden="true" id="ejemploAll">
-imp{"Tablas de" & " multiplicar"}
+        imp{"Tablas de" & " multiplicar"}
 
-num a <- 0
-num c
-c<-1
-imp{"----------------"}
-
-enquanto{a<4+c}:
-    a<-a+1
-    num b
-    b<-0
-    enquanto{b<4+c}:
-        b<-b+1
-        imp{a & " * " & b & " = " & a * b}
-    finenq
-    imp{"----------------"}
-finenq
-
-a<-9
-num b
-b<-12
-c<-13
-
-cheo h <- a>10
-sim{h}:
-    imp{"a es mayor que 10."}
-    sim{b>11}:
-        imp{"a es mayor que 10 y b es mayor que 11."}
-        sim{c>12}:
-            imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+        num a <- 0
+        num c
+        c<-1
+        imp{"tabla del 1"}
+        imp{"----------------"}
+        
+        enquanto{a<9+c}:
+            a<-a+1
+            num b
+            b<-0
+            enquanto{b<9+c}:
+                b<-b+1
+                imp{a & " x " & b & " = " & a * b}
+            finenq
+            imp{"   "}
+            sim{a<=10}:                    
+                imp{"tabla del "&a+1}
+                imp{"----------------"}
+            finsim
+        finenq
+        
+        a<-9
+        num b
+        b<-12
+        c<-13
+        
+        cheo h <- a>10
+        sim{h}:
+            imp{"a es mayor que 10."}
+            sim{b>11}:
+                imp{"a es mayor que 10 y b es mayor que 11."}
+                sim{c>12}:
+                    imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+                finsim
+            finsim
+            
+                imp{"a es menor o igual que 10 y vale: " & a}
         finsim
-    finsim
-    imp{"a es menor o igual que 10 y vale: " & a}
-finsim
+                                            
                     </pre>
                 </div>
             </div>
