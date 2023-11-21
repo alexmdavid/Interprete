@@ -54,13 +54,14 @@
                 <div id="box_examples" style="width: 20%;">
                     <label for="opciones" style="font-size: 18px;">Codigos De Ejemplo:</label>
                     <select id="opciones" name="opciones" style="font-size:12px;">
-                        <option value="vacio"></option>
+                        <option value="vacio">vacío</option>
                         <option value="suma">Tablas De Sumar </option>
                         <option value="multiplicar">Tablas De Multiplicar</option>
-                        <option value="fachatez">Tabla de fachatez</option>
+                        <option value="dividir">Tabla de dividir</option>
                     </select>
                     <pre hidden="true" id="multiplicar">
-    imp{"Tablas de" & " multiplicar"}
+
+    imp{"Tablas de" & " Mltiplicar"}
 
     num a <- 0
     num c
@@ -100,13 +101,95 @@
         
             imp{"a es menor o igual que 10 y vale: " & a}
     finsim
-                                            
+                                        
+                </pre>
+                <pre hidden="true" id="suma">
+                    
+    imp{"Tablas de" & "Sumar"}
+
+    num a <- 0
+    num c
+    c<-1
+    imp{"tabla del 1"}
+    imp{"----------------"}
+
+    enquanto{a<9+c}:
+        a<-a+1
+        num b
+        b<-0
+        enquanto{b<9+c}:
+            b<-b+1
+            imp{a & " + " & b & " = " & a + b}
+        finenq
+        imp{"   "}
+        sim{a<=10}:                    
+            imp{"tabla del "&a+1}
+            imp{"----------------"}
+        finsim
+    finenq
+
+    a<-9
+    num b
+    b<-12
+    c<-13
+
+    cheo h <- a>10
+    sim{h}:
+        imp{"a es mayor que 10."}
+        sim{b>11}:
+            imp{"a es mayor que 10 y b es mayor que 11."}
+            sim{c>12}:
+                imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+            finsim
+        finsim
+        
+            imp{"a es menor o igual que 10 y vale: " & a}
+    finsim
+                                             
                     </pre>
-                    <pre hidden="true" id="suma">
-                        aqui va el codigo de las sumas  > &
-                    </pre>
-                    <pre hidden="true" id="fachatez">
-                        todos son fachas execpto daniel
+                    <pre hidden="true" id="dividir">
+
+    imp{"Tablas de" & " Dividir"}
+
+    num a <- 0
+    num c
+    c<-1
+    imp{"tabla del 1"}
+    imp{"----------------"}
+
+    enquanto{a<9+c}:
+        a<-a+1
+        num b
+        b<-0
+        enquanto{b<9+c}:
+            b<-b+1
+            imp{a & " / " & b & " = " & a / b}
+        finenq
+        imp{"   "}
+        sim{a<=10}:                    
+            imp{"tabla del "&a+1}
+            imp{"----------------"}
+        finsim
+    finenq
+
+    a<-9
+    num b
+    b<-12
+    c<-13
+
+    cheo h <- a>10
+    sim{h}:
+        imp{"a es mayor que 10."}
+        sim{b>11}:
+            imp{"a es mayor que 10 y b es mayor que 11."}
+            sim{c>12}:
+                imp{"a es mayor que 10, b es mayor que 11 y c es mayor que 12."}
+            finsim
+        finsim
+        
+            imp{"a es menor o igual que 10 y vale: " & a}
+    finsim
+                                             
                     </pre>
                     <pre hidden="true" id="vacio"></pre>
                 </div>
