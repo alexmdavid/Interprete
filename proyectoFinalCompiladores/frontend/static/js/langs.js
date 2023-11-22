@@ -6,7 +6,6 @@ var txEjecutar = "El código ha sido ejecutado, revise la salida."
 
 var es = {
     "tituloP": "Proyecto Final - Intérprete",
-    "creditos": "Por: Faiber Hernández y César Torres.",
     "labeltxArea": "Escriba su código aquí:",
     "btnValidar": "Validar",
     "btnEjecutar": "Ejecutar",
@@ -27,7 +26,6 @@ var es = {
 
 var en = {
     "tituloP": "Final Project - Interpreter",
-    "creditos": "By: Faiber Hernández and César Torres.",
     "labeltxArea": "Write your code here:",
     "btnValidar": "Validate",
     "btnEjecutar": "Run",
@@ -48,7 +46,6 @@ var en = {
 
 var pt = {
     "tituloP": "Projeto Final - Intérprete",
-    "creditos": "Por: Faiber Hernández e César Torres.",
     "labeltxArea": "Escreva seu código aqui:",
     "btnValidar": "Validar",
     "btnEjecutar": "Corre",
