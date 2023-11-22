@@ -82,6 +82,10 @@ def t_ENTERO(t):
         t.value = 0
     return t
 
+# digit = r'([o-9])'
+# nondigit = r'([_A-Za-z])'
+# identifier = r'(' + nondigit + r'(' + digit + r'|' + nondigit + r') *)'
+# @TOKEN(identifier)
 def t_ID(t):
      r'[a-zA-Z_][a-zA-Z_0-9]*'
      t.type = reservadas.get(t.value.lower(),'ID')    # Check for reserved words
@@ -117,6 +121,7 @@ def t_error(t):
 from distutils.log import error
 import ply.lex as lex
 lexer = lex.lex()
+# from ply.lex import TOKEN
 
 
 # Asociación de operadores y precedencia

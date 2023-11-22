@@ -26,7 +26,8 @@ var es = {
     "vacio": "vacío",
     "suma": "Tablas De Sumar",
     "multiplicar": "Tablas De Multiplicar",
-    "dividir": "Tabla de dividir"
+    "dividir": "Tabla de dividir",
+    "codigoEjemplo": "Códigos de Ejemplo:",
 };
 
 var en = {
@@ -51,7 +52,8 @@ var en = {
     "vacio": "empty",
     "suma": "Sum Tables",
     "multiplicar": "Multiplication Tables",
-    "dividir": "Division Table"
+    "dividir": "Division Table",
+    "codigoEjemplo": "Example Codes:"
 };
 
 var pt = {
@@ -76,7 +78,8 @@ var pt = {
     "vacio": "vazio",
     "suma": "Tabelas de Soma",
     "multiplicar": "Tabuadas de multiplicação",
-    "dividir": "Tabela de Divisão"
+    "dividir": "Tabela de Divisão",
+    "codigoEjemplo": "Códigos de Exemplo:"
 };
 
 
@@ -116,6 +119,7 @@ function cambiarIdioma(lang) {
     $("#salida").append('<i class="fa-solid fa-outdent"></i> '+lg.salida)
     $("#lblVoz").text(lg.lblvoz)
     $("#tablas").text(lg.tablas)
+    $("label[for='opciones']").text(lg.codigoEjemplo);
     $("#opciones option[value='vacio']").text(lg.vacio);
     $("#opciones option[value='suma']").text(lg.suma);
     $("#opciones option[value='multiplicar']").text(lg.multiplicar);
