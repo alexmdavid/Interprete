@@ -21,7 +21,11 @@ var es = {
     "txvalidarMal": "El código no es válido.",
     "txEjecutar": "El código ha sido ejecutado, revise la salida.",
     "lblvoz": "Voz",
-    "tablas": "Tablas de multiplicar"
+    "tablas": "Tablas de multiplicar",
+    "vacio": "vacío",
+    "suma": "Tablas De Sumar",
+    "multiplicar": "Tablas De Multiplicar",
+    "dividir": "Tabla de dividir"
 };
 
 var en = {
@@ -41,7 +45,11 @@ var en = {
     "txvalidarMal": "The code is not valid.",
     "txEjecutar": "The code has been executed, check the output.",
     "lblvoz": "Voice",
-    "tablas": "Multiplication tables"
+    "tablas": "Multiplication tables",
+    "vacio": "empty",
+    "suma": "Sum Tables",
+    "multiplicar": "Multiplication Tables",
+    "dividir": "Division Table"
 };
 
 var pt = {
@@ -61,7 +69,11 @@ var pt = {
     "txvalidarMal": "O código não é válido.",
     "txEjecutar": "O código foi executado, verifique a saída.",
     "lblvoz": "Voz",
-    "tablas": "Tabuadas de multiplicação"
+    "tablas": "Tabuadas de multiplicação",
+    "vacio": "vazio",
+    "suma": "Tabelas de Soma",
+    "multiplicar": "Tabuadas de multiplicação",
+    "dividir": "Tabela de Divisão"
 };
 
 
@@ -101,6 +113,11 @@ function cambiarIdioma(lang) {
     $("#salida").append('<i class="fa-solid fa-outdent"></i> '+lg.salida)
     $("#lblVoz").text(lg.lblvoz)
     $("#tablas").text(lg.tablas)
+    $("#opciones option[value='vacio']").text(lg.vacio);
+    $("#opciones option[value='suma']").text(lg.suma);
+    $("#opciones option[value='multiplicar']").text(lg.multiplicar);
+    $("#opciones option[value='dividir']").text(lg.dividir);
+    
     atencion = lg.atencion
     txAreaVacio = lg.txAreaVacio
     txvalidarOk = lg.txvalidarOk
