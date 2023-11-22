@@ -1,8 +1,8 @@
 var atencion = "Atención:"
-var txAreaVacio = "Por favor ingrese su código en el editor antes de validar o ejecutar."
-var txvalidarOk = "El código ha sido procesado, todo esta bien."
+var txAreaVacio = "Por favor, introduzca su código en el editor antes de validar o ejecutar."
+var txvalidarOk = "El código ha sido ejecutado satisfactoriamente."
 var txvalidarMal = "El código no es válido."
-var txEjecutar = "El código ha sido ejecutado, revise la salida."
+var txEjecutar = "El código ha sido ejecutado satisfactoriamente."
 
 var es = {
     "tituloP": "Proyecto Final - Intérprete",
@@ -16,8 +16,8 @@ var es = {
     "ingles": "Inglés",
     "portugues": "Portugués",
     "atencion": "Atención:",
-    "txAreaVacio": "Por favor ingrese su código en el editor antes de validar o ejecutar.",
-    "txvalidarOk": "El código ha sido procesado, todo esta bien.",
+    "txAreaVacio": "Por favor, introduzca su código en el editor antes de validar o ejecutar.",
+    "txvalidarOk": "El código ha sido ejecutado satisfactoriamente.",
     "txvalidarMal": "El código no es válido.",
     "txEjecutar": "El código ha sido ejecutado, revise la salida.",
     "lblvoz": "Voz",
@@ -25,9 +25,9 @@ var es = {
     "vacio": "vacío",
     "suma": "Tablas De Sumar",
     "multiplicar": "Tablas De Multiplicar",
-    "dividir": "Tabla de dividir",
-    "codigoEjemplo": "Códigos de Ejemplo:",
+    "dividir": "Tabla de dividir"
 };
+
 
 var en = {
     "tituloP": "Final Project - Interpreter",
