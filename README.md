@@ -25,11 +25,15 @@ Para ejecutar este proyecto, sigue estos pasos:
 
 Puedes crearlo con el siguiente comando:
 
-<code>python -m venv nombre_del_entorno</code>
+```bash
+python -m venv nombre_del_entorno
+```
 
 sino funciona intenta con este otro:
 
-<code>python3 -m venv nombre_del_entorno</code>
+```bash
+python3 -m venv nombre_del_entorno
+```
 
 por ultimo identificar si el entorno esta activo, para averiguarlo simplemente miras la terminal y si al comienzo empieza con (nombre_del_entorno) esta activo,
 sino aparece significa que esta desactivado para activarlo lo puedes hacer con el siguiente comando:
@@ -37,17 +41,22 @@ sino aparece significa que esta desactivado para activarlo lo puedes hacer con e
 <code>source nombre_del_entorno/bin/activate</code>
 
 
+
 ### 2. Instalar Dependecias en el Entorno Virtual
 
 Puedes instalar las dependecias con el siguiente comando:
 
-<code>pip install -r requirements.txt</code>
+```bash
+pip install -r requirements.txt</code>
+```
 
 
 ### 3. Ejecutar Servidor de Desarrollo de Django
 Para ejecuctarlo debes encontrarte en la raiz del proyecto y en la terminal ejecutar el siguiente codigo:
 
-<code>python manage.py runserver</code>
+```bash
+python manage.py runserver</code>
+```
 
 Por defecto, el servidor se ejecutará en http://127.0.0.1:8000/
 igualmente el link se mostrara en la terminal siempre y cuando se ejecute correctamente.
