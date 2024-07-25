@@ -38,8 +38,9 @@ python3 -m venv nombre_del_entorno
 por ultimo identificar si el entorno esta activo, para averiguarlo simplemente miras la terminal y si al comienzo empieza con (nombre_del_entorno) esta activo,
 sino aparece significa que esta desactivado para activarlo lo puedes hacer con el siguiente comando:
 
-<code>source nombre_del_entorno/bin/activate</code>
-
+```bash
+source nombre_del_entorno/bin/activate
+```
 
 
 ### 2. Instalar Dependecias en el Entorno Virtual
