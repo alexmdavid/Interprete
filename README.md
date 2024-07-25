@@ -48,7 +48,7 @@ source nombre_del_entorno/bin/activate
 Puedes instalar las dependecias con el siguiente comando:
 
 ```bash
-pip install -r requirements.txt</code>
+pip install -r requirements.txt
 ```
 
 
@@ -56,7 +56,7 @@ pip install -r requirements.txt</code>
 Para ejecuctarlo debes encontrarte en la raiz del proyecto y en la terminal ejecutar el siguiente codigo:
 
 ```bash
-python manage.py runserver</code>
+python manage.py runserver
 ```
 
 Por defecto, el servidor se ejecutará en http://127.0.0.1:8000/
